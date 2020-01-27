@@ -62,6 +62,8 @@
     const parallaxImage = ('https://firebasestorage.googleapis.com/v0/b/klinicheskij-psiholog.appspot.com/o/parallax2-min.jpg?alt=media&token=de709e97-bc85-4ad6-9db4-16971e440f2e');
     const independentImage = ('https://firebasestorage.googleapis.com/v0/b/klinicheskij-psiholog.appspot.com/o/independent.jpg?alt=media&token=a8f1ebee-f3af-4892-95a9-132dc1fa8457');
     const childrenTantrums = ('https://firebasestorage.googleapis.com/v0/b/klinicheskij-psiholog.appspot.com/o/children-tantrums.jpg?alt=media&token=3e50de8c-980b-4389-b212-5e1434e767cd');
+    const symptomsOfAutism = ('https://firebasestorage.googleapis.com/v0/b/klinicheskij-psiholog.appspot.com/o/symptoms-of-autism.jpg?alt=media&token=d74360d9-1b0c-4285-8e26-0ebb060f8bf4');
+    const sy = ('https://firebasestorage.googleapis.com/v0/b/klinicheskij-psiholog.appspot.com/o/162762.jpg?alt=media&token=aec44584-aeda-4e18-b7ed-954a36832f6a');
     export default {
         name: "Blog",
         data() {
@@ -116,14 +118,29 @@
                             to: '/blog/autismIs',
                             img: parallaxImage
                         },
- {
+                        {
                             title: 'Детские истерики',
                             text: 'Детские истерики, как нам это знакомо! С самого раннего детства ребенок привлекает внимание\n' +
                                 'родителя к себе плачем, а повзрослев, демонстративно-негативным поведением где-то\n' +
                                 'примерно начиная с 2.5 лет.',
                             to: '/blog/children-tantrums',
                             img: childrenTantrums
-                        }
+                        },
+                        {
+                            title: 'Симптомы  аутизма',
+                            text: 'При аутистическом расстройстве слабое звено – социальное\n' +
+                                'поведение. Давайте разберемся, что включает в себя понятие',
+                            to: '/blog/symptoms-of-autism',
+                            img: symptomsOfAutism
+                        },
+                        {
+                            title: 'Фобии',
+                            text: 'Приветствую всех. Сегодня мы обсудим тему фобий. Страх присущ всем людям.\n' +
+                                'Это базовая эмоция, отвечающая за безопасность, в основе инстинкт лежит\n' +
+                                'самосохранения. Испытывать страх нормальное явление в отличие от фобий.',
+                            to: '/blog/phobias',
+                            img: sy
+                        },
 
                     ]
 

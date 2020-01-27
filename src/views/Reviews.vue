@@ -3,7 +3,7 @@
         <v-col>
             <v-row justify="center" align-content="center">
                 <div>
-                    <div><h1>Отзывы психолг Наталья Толмачева</h1></div>
+                    <div><h1>Отзывы психолог Наталья Толмачева</h1></div>
                     <div class="py-5"><h2>В этом разделе пишем отзывы, коментарии будем только рады</h2></div>
                     <div id="fb-root"></div>
                     <div class="fb-comments"

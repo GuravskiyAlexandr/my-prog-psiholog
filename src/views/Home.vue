@@ -1,65 +1,63 @@
 <template>
-    <div>
-        <v-container>
-            <v-row justify="center">
-                <v-card class="row">
-                    <v-col class="avatar-col">
-                        <img v-if="avatar"
-                             class="avatar-img"
-                             :src=avatar
-                             alt="Нейропсихолог Наталья Толмачева"
-                        >
-                    </v-col>
-                    <v-col>
-                        <v-row align="center" class=""
-                               style="height: 100%"
-                        >
-                            <v-col class="ma-2">
-                                <h1 :class="{'headline  font-italic': $vuetify.breakpoint.xs}"
-                                    class=" may_font">Клинический психолог. Психотерапевт. Детский нейропсихолог.</h1>
-                                <h2 class=" title font-italic font-weight-light">
+    <v-container>
+        <v-row justify="center">
+            <v-card class="d-flex">
+                <v-col>
+                    <div class="d-flex flex-wrap">
+                        <v-col>
+                            <div  :class="{'justify-center d-flex': $vuetify.breakpoint.xs}">
+                                <img v-if="avatar"
+                                     class="avatar-img"
+                                     :src=avatar
+                                     alt="Нейропсихолог Наталья Толмачева"
+                                     title="Нейропсихолог Наталья Толмачева"
+                                />
+                            </div>
+                        </v-col>
+                        <v-col class="ma-2">
+                            <div>
+                                <h1 class="may_font">Клинический психолог.</h1>
+                                <h1 class=" may_font">Детский нейропсихолог.</h1>
+                                <h2 class=" title font-italic font-weight-bold">
                                     Направление психотерапевтической деятельности (когнитивно-бихевиоральная
                                     психотерапия,
-                                    нейролингвистическое программирование. НЛП - практик, НЛП - мастер). Детский
-                                    нейропсихолог.
+                                    нейролингвистическое программирование. НЛП - практик, НЛП - мастер).
                                 </h2>
-                            </v-col>
+                            </div>
+                        </v-col>
+                    </div>
+                </v-col>
+            </v-card>
+        </v-row>
+        <v-row justify="center">
+            <v-card class="row">
+                <v-col cols="12" class="pb-0">
 
-                        </v-row>
-                    </v-col>
-                </v-card>
-            </v-row>
+                    <Hello></Hello>
 
-            <v-row justify="center">
-                <v-card class="row">
-                    <v-col cols="12" class="pb-0">
+                    <v-divider></v-divider>
 
-                        <Hello></Hello>
+                    <p class="title mt-10 ">Методы и подходы</p>
+                    <v-row justify="center">
 
-                        <v-divider></v-divider>
-
-                        <p class="title mt-10 ">Методы и подходы</p>
-
-                        <v-row justify="center">
-                            <v-card class="row">
-                                <ImUsedForBaby class="background_baby"></ImUsedForBaby>
-                                <ImUsedForAdult class="background_adult"></ImUsedForAdult>
-                            </v-card>
-                        </v-row>
-                    </v-col>
-                </v-card>
-            </v-row>
-        </v-container>
-
-    </div>
+                        <v-card class="row">
+                            <ImUsedForBaby class="background_baby"></ImUsedForBaby>
+                            <ImUsedForAdult class="background_adult"></ImUsedForAdult>
+                        </v-card>
+                    </v-row>
+                </v-col>
+            </v-card>
+        </v-row>
+    </v-container>
 </template>
 
 <script>
 
-    import ImUsedForBaby from "../components/home/ImUsedForBaby.vue";
-    import ImUsedForAdult from "../components/home/ImUsedForAdult.vue";
-    import Hello from "../components/home/Hello";
+    import ImUsedForBaby from "../components/home/ImUsedForBaby.vue"
+    import ImUsedForAdult from "../components/home/ImUsedForAdult.vue"
+    import Hello from "../components/home/Hello"
 
+    import load from "../../public/load.gif"
     const avatar = "https://firebasestorage.googleapis.com/v0/b/klinicheskij-psiholog.appspot.com/o/log-min.jpg?alt=media&token=cda43fa8-5e9e-428b-9efe-00e1e9baba5f"
 
 
@@ -67,7 +65,9 @@
         components: {Hello, ImUsedForAdult, ImUsedForBaby},
         data() {
             return {
+                load,
                 avatar: avatar,
+                isActive: false,
             }
         },
         metaInfo: {
@@ -149,7 +149,7 @@
                             "telephone": "",
                             "contactType": "customer service",
                             "areaServed": "UA",
-                            "availableLanguage": ["Russian","Ukrainian"]
+                            "availableLanguage": ["Russian", "Ukrainian"]
                         },
                         "sameAs": "https://www.facebook.com/%D0%9A%D0%BB%D0%B8%D0%BD%D0%B8%D1%87%D0%B5%D0%BA%D0%B8%D0%B9-%D0%BF%D1%81%D0%B8%D1%85%D0%BE%D0%BB%D0%BE%D0%B3-%D0%9D%D0%B5%D0%B9%D1%80%D0%BE%D0%BF%D1%81%D0%B8%D1%85%D0%BE%D0%BB%D0%BE%D0%B3-%D0%A2%D0%BE%D0%BB%D0%BC%D0%B0%D1%87%D1%91%D0%B2%D0%B0-%D0%9D%D0%B0%D1%82%D0%B0%D0%BB%D1%8C%D1%8F-105253370838895/"
                     }
@@ -163,7 +163,7 @@
 
     .may_font {
         font-family: 'Marck Script', cursive;
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .avatar-img {

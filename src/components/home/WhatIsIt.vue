@@ -1,5 +1,13 @@
 <template>
     <div>
+        <v-lazy
+                v-model="isActive"
+                :options="{
+            threshold: .5
+          }"
+                min-height="200"
+                transition="fade-transition"
+        >
             <v-flex
                     class="d-flex flex-wrap "
                     color="grey lighten-2"
@@ -36,6 +44,7 @@
                                     text
                                     color="deep-purple accent-4"
                                     :to=item.to
+                                    title="читать что такое аутизм"
                             >
                                 Читать больше
                             </v-btn>
@@ -43,6 +52,7 @@
                     </v-card>
                 </template>
             </v-flex>
+        </v-lazy>
     </div>
 </template>
 
@@ -52,6 +62,7 @@
         name: "WhatIsIt",
         data() {
             return {
+                isActive:false,
                 article:
                     [
                         {

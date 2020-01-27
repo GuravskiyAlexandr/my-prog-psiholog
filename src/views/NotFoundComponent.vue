@@ -6,7 +6,7 @@
                     <v-card>
                         <v-card-title class="justify-center" ><h1>NOT FOUND</h1></v-card-title>
                         <p class="px-2">Страница не найдена! Эта страница  возможно переехала</p>
-                        <v-img   height="300" :lazy-src="img404" :src="img404"/>
+                        <v-img   max-height="300" :lazy-src="img404" :src="img404"/>
                         <router-link to="/">Перейти на главную</router-link>
                         <v-card-text><H2 class="display-4 text-center font-weight-black">404</H2></v-card-text>
                     </v-card>

@@ -11,12 +11,14 @@
                 <v-list-item-group v-model="group">
                     <v-list-item v-for="(item, i) in itemNavig"
                                  :key="'list'+i"
-                                 :to="item.route">
+                                 :to="item.route"
+                                 :title="item.title"
+                    >
                         <v-list-item-icon>
                             <v-icon size="30">{{item.icon}}</v-icon>
                         </v-list-item-icon>
                         <v-list-item-content>
-                            {{item.title}}
+                            {{item.link}}
                         </v-list-item-content>
                     </v-list-item>
                 </v-list-item-group>
@@ -46,10 +48,10 @@
                         <v-row>
                             <v-col align="center"
                                    class="phon_size flex-nowrap align-center  justify-space-around">
-                                <a style="text-decoration: none; color: black" href="tel: +38 (063) 688-20-99">
+                                <a  title="телефон" style="text-decoration: none; color: black" href="tel: +38 (063) 688-20-99">
                                     <v-icon> mdi-phone-in-talk</v-icon>
                                 </a>
-                                <a style="text-decoration: none; color: black" href="tel: +38 (063) 688-20-99">
+                                <a title="телефон" style="text-decoration: none; color: black" href="tel: +38 (063) 688-20-99">
                                     +38 (063) 688-20-99
                                 </a>
                             </v-col>
@@ -62,9 +64,10 @@
                                 v-for="(item, i) in itemNavig"
                                 :key="i"
                                 :to="item.route"
+                                :title="item.title"
 
                         >
-                            <div class="subtitle-2">{{ item.title }}</div>
+                            <div class="subtitle-2">{{ item.link }}</div>
                         </v-tab>
 
                     </v-tabs>
@@ -115,35 +118,41 @@
             itemNavig() {
                 return [
                     {
-                        title: 'Главная',
+                        link: 'Главная',
                         icon: ' mdi-home',
-                        route: '/'
+                        route: '/',
+                        title:'Переход на главную страницу'
                     },
                     {
-                        title: 'Обо мне',
+                        link: 'Обо мне',
                         icon: ' mdi-information-outline',
-                        route: '/about'
+                        route: '/about',
+                        title:'Образование, дипломы '
                     },
                     {
-                        title: 'Блог',
+                        link: 'Блог',
                         icon: '  mdi-blogger',
-                        route: '/blog'
+                        route: '/blog',
+                        title:'Мои статьи и мысли'
                     },
                     {
-                        title: 'Отзывы',
+                        link: 'Отзывы',
                         icon: 'mdi-wechat',
-                        route: '/reviews'
+                        route: '/reviews',
+                        title:'Смотреть отзывы'
                     },
 
+                    // {
+                    //     link: 'Цены',
+                    //     icon: ' mdi-credit-card',
+                    //     route: '/price',
+                    //     title:' Прайс лист'
+                    // },
                     {
-                        title: 'Цены',
-                        icon: ' mdi-credit-card',
-                        route: '/price'
-                    },
-                    {
-                        title: 'Контакты',
+                        link: 'Контакты',
                         icon: 'd mdi-contact-phone-outline',
-                        route: '/contact'
+                        route: '/contact',
+                        title:'Мои контакты'
                     }
                 ]
 
